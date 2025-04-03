@@ -7,7 +7,14 @@ const list =  document.getElementById("lista")
 const emailArray = [];
 // creato ciclo for per chiedere all'API un'email generata randomicamente 
 for (let i = 0; i < 10; i++) {
-    
+    // creata richiesta API
+    axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then((resp) =>{
+        li= resp.data.response
+        list.innerHTML=resp.data.response
+        emailArray.push(li)
+        // emailArray.innerHTML.emailArray[i]  
+    })
+    // list.innerHTML += `<li><a href="#">Item ${list.emailArray[li].length}</a></li>`;
 }
 
 
