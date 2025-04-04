@@ -5,7 +5,7 @@
 const list =  document.getElementById("lista")
 // creato array contenente le email
 const emailArray = [];
-// creato ciclo for per chiedere all'API un'email generata randomicamente 
+// creato ciclo for per chiedere all'API un'email generata randomicamente
 for (let i = 0; i < 10; i++) {
 
     // creata richiesta API
@@ -18,6 +18,6 @@ for (let i = 0; i < 10; i++) {
         emailArray.push(li);
 
         // creo gli elementi li da inserire nella lista e stampo all'interno il primo valore dell'array
-        list.innerHTML += `<li>${emailArray.shift(0)}</li>`; // l'inserimento del metodo .shift() serve per non mostrare più undefined al posto di alcuni elementi della lista
+        list.innerHTML += `<li d-block>${emailArray.shift(0)} <i class="fa-solid fa-clipboard"></i></li>`; // l'inserimento del metodo .shift() serve per non mostrare più undefined al posto di alcuni elementi della lista
     })
 }
